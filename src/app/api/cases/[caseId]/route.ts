@@ -9,7 +9,7 @@ export async function GET(
 ) {
   try {
     const { caseId } = await params;
-    const caseData = getCaseById(caseId);
+    const caseData = await getCaseById(caseId);
     if (!caseData) {
       return NextResponse.json({ success: false, error: 'Case not found' }, { status: 404 });
     }
@@ -26,11 +26,11 @@ export async function PUT(
   try {
     const { caseId } = await params;
     const body = await request.json();
-    const updated = updateCase(caseId, body);
+    const updated = await updateCase(caseId, body);
     if (!updated) {
       return NextResponse.json({ success: false, error: 'Failed to update case or not found' }, { status: 400 });
     }
-    const refreshed = getCaseById(caseId);
+    const refreshed = await getCaseById(caseId);
     return NextResponse.json({ success: true, case: refreshed });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
@@ -43,7 +43,7 @@ export async function DELETE(
 ) {
   try {
     const { caseId } = await params;
-    const deleted = deleteCase(caseId);
+    const deleted = await deleteCase(caseId);
     return NextResponse.json({ success: deleted });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });

@@ -13,7 +13,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const posts = getCommunityPosts();
+    const posts = await getCommunityPosts();
     return NextResponse.json({ success: true, posts });
   } catch (error: any) {
     console.error('Error fetching community posts:', error);
