@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-2);
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #a1a1aa;
+}
+
+.uploadSection {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.captionInput {
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+  background-color: #141417;
+  color: #ffffff !important;
+  width: 260px;
+  font-size: var(--text-sm);
+}
+
+.captionInput::placeholder {
+  color: #71717a !important;
+}
+
+.captionInput:focus {
+  outline: none;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.card {
+  background-color: #111113;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--duration-normal) var(--ease-default), box-shadow var(--duration-normal) var(--ease-default);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #3f3f46;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: #0c0c0e;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-default);
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.cardContent {
+  padding: var(--space-4);
+}
+
+.caption {
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-3);
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-xs);
+  color: #71717a;
+}
+
+.source {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.verifiedIcon {
+  color: #ffffff;
+}

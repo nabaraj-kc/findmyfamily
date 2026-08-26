@@ -1,0 +1,127 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: var(--text-sm);
+  color: #ffffff;
+  font-weight: var(--weight-medium);
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  background-color: #141417;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--text-base);
+  color: #ffffff !important;
+  transition: all var(--duration-fast) var(--ease-default);
+}
+
+.input::placeholder {
+  color: #71717a !important;
+  opacity: 0.9;
+}
+
+.input:hover:not(:disabled) {
+  border-color: #3f3f46;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 1px #ffffff !important;
+  background-color: #18181b;
+}
+
+.input:disabled {
+  background-color: #0c0c0e;
+  color: #52525b !important;
+  cursor: not-allowed;
+}
+
+[lang="ne"] .input, :lang(ne) .input {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.hasError {
+  border-color: #ef4444 !important;
+}
+
+.hasError:focus {
+  box-shadow: 0 0 0 1px #ef4444 !important;
+}
+
+.hasIcon {
+  padding-left: 40px;
+}
+
+.hasVoice {
+  padding-right: 40px;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.iconLeft {
+  position: absolute;
+  left: 12px;
+  color: #71717a;
+  pointer-events: none;
+  display: flex;
+}
+
+.voiceBtn, .voiceBtnArea {
+  position: absolute;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #71717a;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.voiceBtnArea {
+  bottom: 8px;
+}
+
+.voiceBtn:hover, .voiceBtnArea:hover {
+  background-color: #27272a;
+  color: #ffffff;
+}
+
+.errorText {
+  font-size: var(--text-xs);
+  color: #f87171;
+  margin-top: 2px;
+}
+
+.helperText {
+  font-size: var(--text-xs);
+  color: #71717a;
+  margin-top: 2px;
+}

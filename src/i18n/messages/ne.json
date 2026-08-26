@@ -1,0 +1,175 @@
+{
+  "common": {
+    "appName": "Find My Family",
+    "tagline": "नेपाल हराएका व्यक्ति खोजी तथा परिवार पुनर्मिलन मञ्च",
+    "loading": "लोड हुँदैछ...",
+    "error": "केही गल्ती भयो। कृपया फेरि प्रयास गर्नुहोस्।",
+    "retry": "पुन: प्रयास",
+    "cancel": "रद्द गर्नुहोस्",
+    "save": "सुरक्षित गर्नुहोस्",
+    "close": "बन्द गर्नुहोस्",
+    "back": "पछाडि जानुहोस्",
+    "next": "अगाडि बढ्नुहोस्",
+    "search": "खोज्नुहोस्",
+    "share": "सेयर गर्नुहोस्",
+    "learnMore": "थप जान्नुहोस्",
+    "viewAll": "सबै हेर्नुहोस्",
+    "lastUpdated": "अन्तिम अपडेट {time}",
+    "pendingSync": "सिंक हुन बाँकी — तपाईंको डाटा स्थानीय रूपमा सुरक्षित छ",
+    "connectionLost": "तपाईं अफलाइन हुनुहुन्छ जस्तो देखिन्छ। चिन्ता नलिनुहोस् — तपाईंको डाटा सुरक्षित छ र इन्टरनेट जडान हुँदा सिंक हुनेछ।",
+    "noResults": "अहिलेसम्म कुनै मिल्दो नतिजा भेटिएन — फरक हिज्जे प्रयोग गर्नुहोस्, वा नयाँ रिपोर्ट आउँदा फेरि हेर्नुहोस्।"
+  },
+  "navigation": {
+    "home": "गृहपृष्ठ (Home)",
+    "reportMissing": "हराएको रिपोर्ट (Report Missing)",
+    "reportFound": "भेटिएको रिपोर्ट (Report Found)",
+    "search": "खोज्नुहोस् (Search)",
+    "gallery": "ग्यालरी (Gallery)",
+    "community": "समुदाय (Community)",
+    "developers": "डेभलपरका लागि (For Developers)",
+    "about": "हाम्रो बारेमा (About)",
+    "login": "लग इन (Log in)",
+    "language": "English",
+    "dataSaver": "डाटा सेभर (Data Saver)",
+    "accessibility": "पहुँच (Accessibility)"
+  },
+  "homepage": {
+    "heroTitle": "विपत्तिमा छुट्टिएका परिवारलाई पुनर्मिलन गर्न सहयोग गर्नुहोस्",
+    "heroSubtitle": "हराएको व्यक्तिको रिपोर्ट गर्नुहोस्, भेटिएको जानकारी दिनुहोस्, वा आफ्ना प्रियजनको खोजी गर्नुहोस्।",
+    "reportMissingCta": "हराएको व्यक्तिको रिपोर्ट गर्नुहोस्",
+    "reportFoundCta": "भेटिएको व्यक्तिको रिपोर्ट गर्नुहोस्",
+    "searchPlaceholder": "नाम, उपनाम, स्थान, वा केस आईडीले खोज्नुहोस्...",
+    "statsActive": "सक्रिय केसहरू",
+    "statsResolved": "पुनर्मिलित परिवारहरू",
+    "statsTotal": "कुल रिपोर्टहरू"
+  },
+  "caseStatus": {
+    "missing": "हराएको",
+    "foundSafe": "भेटियो — सुरक्षित",
+    "foundInjured": "भेटियो — घाइते",
+    "foundDeceased": "भेटियो — मृत",
+    "reunited": "पुनर्मिलित",
+    "resolved": "समाधान भयो"
+  },
+  "trustTier": {
+    "official": "आधिकारिक रूपमा प्रमाणित",
+    "volunteer": "स्वयंसेवक प्रमाणित",
+    "community": "समुदायद्वारा रिपोर्ट गरिएको"
+  },
+  "emergency": {
+    "title": "आपत्कालीन हटलाइनहरू",
+    "subtitle": "यो मञ्चले आधिकारिक आपत्कालीन सेवाहरूलाई पूरक गर्दछ, प्रतिस्थापन गर्दैन।",
+    "police": "नेपाल प्रहरी",
+    "redCross": "नेपाल रेडक्रस",
+    "disaster": "विपत्ति आपत्कालीन (विपद)",
+    "ambulance": "एम्बुलेन्स",
+    "armedPolice": "सशस्त्र प्रहरी बल"
+  },
+  "footer": {
+    "about": "Find My Family बारेमा",
+    "privacy": "गोपनीयता र डाटा नीति",
+    "howItWorks": "यो कसरी काम गर्छ",
+    "contact": "सम्पर्क",
+    "madeWith": "नेपालका जनताको लागि हेरचाहसाथ निर्मित"
+  },
+  "accessibility": {
+    "largeText": "ठूलो अक्षर",
+    "highContrast": "उच्च कन्ट्रास्ट",
+    "dataSaver": "डाटा सेभर मोड",
+    "voiceInput": "भ्वाइस इनपुट"
+  },
+  "reportMissing": {
+    "pageTitle": "हराएको व्यक्तिको रिपोर्ट गर्नुहोस् (Report Missing Person)",
+    "pageSubtitle": "कृपया विवरणहरू प्रदान गर्नुहोस्। (Please provide details.)",
+    "fullName": "पूरा नाम",
+    "fullNamePlaceholder": "नाम प्रविष्ट गर्नुहोस्",
+    "nickname": "उपनाम",
+    "nicknamePlaceholder": "वैकल्पिक उपनाम",
+    "age": "उमेर",
+    "gender": "लिङ्ग",
+    "district": "जिल्ला",
+    "lastSeenLocation": "अन्तिम पटक देखिएको स्थान",
+    "lastSeenLocationPlaceholder": "शहर, सडक, वा स्थलचिह्न",
+    "lastSeenDate": "अन्तिम पटक देखिएको मिति",
+    "featuresDesc": "कुनै पहिचान चिन्हहरू?",
+    "distinguishingFeatures": "पहिचान विशेषताहरू",
+    "featuresPlaceholder": "खत, ट्याटू, चश्मा",
+    "clothing": "लुगा",
+    "clothingPlaceholder": "उनीहरूले के लगाएका थिए?",
+    "reporterDesc": "तपाईंको विवरण।",
+    "reporterName": "तपाईंको नाम",
+    "reporterNamePlaceholder": "पूरा नाम",
+    "reporterPhone": "फोन नम्बर",
+    "relationship": "हराएको व्यक्तिसँगको सम्बन्ध",
+    "privacyConsentText": "म यी विवरणहरू साझा गर्न सहमत छु",
+    "basicDetailsDesc": "आधारभूत जानकारी।",
+    "locationDesc": "उनीहरूलाई अन्तिम पटक कहाँ देखिएको थियो?"
+  },
+  "reportFound": {
+    "pageTitle": "भेटिएको व्यक्तिको रिपोर्ट गर्नुहोस् (Report Found Person)",
+    "pageSubtitle": "कृपया विवरणहरू प्रदान गर्नुहोस्। (Please provide details.)",
+    "statusSafe": "सुरक्षित",
+    "statusSafeDesc": "व्यक्ति सुरक्षित छ",
+    "statusInjured": "घाइते",
+    "statusInjuredDesc": "चिकित्सा ध्यान आवश्यक छ",
+    "statusDeceased": "मृत",
+    "statusDeceasedDesc": "दुर्भाग्यवश मृत",
+    "statusStepDesc": "हालको अवस्था चयन गर्नुहोस्",
+    "approximateName": "अनुमानित नाम",
+    "approximateNameHelper": "यदि थाहा छ भने",
+    "approximateNamePlaceholder": "नाम",
+    "approximateAge": "अनुमानित उमेर",
+    "gender": "लिङ्ग",
+    "district": "जिल्ला",
+    "foundLocation": "भेटिएको स्थान",
+    "foundLocationPlaceholder": "तपाईंले उनीहरूलाई कहाँ भेट्टाउनुभयो?",
+    "foundDate": "भेटिएको मिति",
+    "featuresDesc": "कुनै पहिचान चिन्हहरू?",
+    "distinguishingFeatures": "पहिचान विशेषताहरू",
+    "featuresPlaceholder": "खत, ट्याटू",
+    "clothing": "लुगा",
+    "clothingPlaceholder": "उनीहरूले के लगाएका छन्?",
+    "reporterDesc": "तपाईंको विवरण।",
+    "reporterName": "तपाईंको नाम",
+    "reporterNamePlaceholder": "पूरा नाम",
+    "reporterPhone": "फोन नम्बर",
+    "privacyConsentText": "म यी विवरणहरू साझा गर्न सहमत छु",
+    "basicDetailsDesc": "आधारभूत जानकारी।",
+    "locationDesc": "उनीहरूलाई कहाँ भेटिएको थियो?"
+  },
+  "emergencyAlerts": {
+    "safeMessage": "के तपाईं सुरक्षित हुनुहुन्छ? यदि तपाईंलाई तत्काल उद्धार आवश्यक छ भने कृपया स्थानीय अधिकारीहरूलाई सम्पर्क गर्नुहोस्।",
+    "emergencyNumbers": "आपतकालीन हटलाइनहरू: प्रहरी (१००), रेडक्रस (११३)।",
+    "pmReliefFund": "प्रधानमन्त्री दैवी प्रकोप उद्धार कोषमा सहयोग गर्नुहोस्: हिमालयन बैंक ($) 01904631210086, स्ट्यान्डर्ड चार्टर्ड 01013243601, राष्ट्रिय वाणिज्य बैंक 113010000362001।"
+  },
+  "about": {
+    "title": "हाम्रो बारेमा (About Find My Family)",
+    "content": "नेपालमा गएको विनाशकारी बाढी र पहिरोको प्रतिक्रिया स्वरूप 'Find My Family' निर्माण गरिएको हो, जसले भोटेकोशी र त्रिशूली नदी प्रणाली वरपरका बस्तीहरूलाई गम्भीर रूपमा असर गरेको छ। यस विपत्तिले सयौं बेपत्ता र हजारौं परिवार विस्थापित गराएको छ। हाम्रो उद्देश्य भनेको बेपत्ता प्रियजन खोजिरहेका र सहयोग चाहिने व्यक्तिहरू फेला पारेकाहरूबीच द्रुत रूपमा सूचना आदानप्रदान सहज बनाउनु हो।"
+  },
+  "privacy": {
+    "title": "गोपनीयता नीति (Privacy Policy)",
+    "content": "विपद्को समयमा सूचना आदानप्रदान महत्त्वपूर्ण हुन्छ, तर कमजोर व्यक्तिहरूको सुरक्षा पनि त्यत्तिकै आवश्यक छ। 'Find My Family' मा बुझाइएका सबै डाटा—नाम, स्थान र तस्बिरहरू सहित—विशेष रूपमा परिवार पुनर्मिलन र विपद् प्रतिक्रिया समन्वयको उद्देश्यका लागि प्रयोग गरिन्छ। हामी व्यक्तिगत डाटा बेच्दैनौं।"
+  },
+  "howItWorks": {
+    "title": "यसले कसरी काम गर्छ (How It Works)",
+    "step1Title": "१. रिपोर्ट गर्नुहोस्",
+    "step1Desc": "हराएको व्यक्ति वा तपाईंले फेला पारेको व्यक्तिबारे विवरण बुझाउनुहोस्।",
+    "step2Title": "२. एआई म्याचिङ",
+    "step2Desc": "हाम्रो प्रणालीले सम्भावित मिल्दो जुल्दो विवरणहरू खोज्छ।",
+    "step3Title": "३. प्रमाणीकरण",
+    "step3Desc": "समुदायका स्वयंसेवक र अधिकारीहरूले जानकारी प्रमाणित गर्छन्।"
+  },
+  "gallery": {
+    "title": "बाढी तस्बिर ग्यालरी",
+    "subtitle": "प्रभावित क्षेत्रका भर्खरैका दृश्यहरू।",
+    "uploadBtn": "तस्बिर अपलोड गर्नुहोस्",
+    "uploadPlaceholder": "तस्बिर चयन गर्नुहोस्",
+    "captionPlaceholder": "स्थान वा विवरण थप्नुहोस्..."
+  },
+  "community": {
+    "title": "सामुदायिक अपडेटहरू",
+    "subtitle": "स्थानीय अपडेट र सहयोगहरू साझा गर्नुहोस्।",
+    "postPlaceholder": "अपडेट साझा गर्नुहोस्...",
+    "postBtn": "अपडेट पोस्ट गर्नुहोस्"
+  }
+}

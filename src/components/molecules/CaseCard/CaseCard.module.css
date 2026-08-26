@@ -1,0 +1,131 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #111113;
+  border-radius: var(--radius-xl);
+  border: 1px solid #27272a;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all var(--duration-normal) var(--ease-default);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.card:hover, .card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #3f3f46;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #0c0c0e;
+  border-bottom: 1px solid #27272a;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #52525b;
+}
+
+.badgeContainer {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 10;
+}
+
+.statusBadge {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.content {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
+}
+
+.name {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.caseId {
+  font-size: var(--text-xs);
+  color: #d4d4d8;
+  font-family: monospace;
+  background-color: #18181b;
+  border: 1px solid #27272a;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  flex: 1;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.detailIcon {
+  color: #71717a;
+  flex-shrink: 0;
+}
+
+.detailText {
+  font-size: var(--text-sm);
+  color: #a1a1aa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid #27272a;
+}
+
+.ageGender {
+  font-size: var(--text-xs);
+  color: #71717a;
+  font-weight: var(--weight-medium);
+}

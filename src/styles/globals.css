@@ -1,0 +1,75 @@
+/* Find My Family — Global Styles */
+@import './reset.css';
+@import './tokens.css';
+@import './typography.css';
+@import './utilities.css';
+
+html, body {
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Universal Form Element High-Contrast Rules */
+input, textarea, select {
+  color: #ffffff !important;
+  background-color: #141417 !important;
+  border: 1px solid #27272a !important;
+  font-family: inherit;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #71717a !important;
+  opacity: 0.9;
+}
+
+select option {
+  background-color: #141417 !important;
+  color: #ffffff !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 1px #ffffff !important;
+}
+
+::selection {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+main {
+  animation: fadeIn var(--duration-normal) var(--ease-out);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

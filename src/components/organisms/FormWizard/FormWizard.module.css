@@ -1,0 +1,61 @@
+.wizard {
+  display: flex;
+  flex-direction: column;
+  background-color: #111113;
+  border-radius: var(--radius-xl);
+  border: 1px solid #27272a;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.progressContainer {
+  padding: var(--space-6);
+  border-bottom: 1px solid #27272a;
+  background-color: #0c0c0e;
+}
+
+.progressDots {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.dot {
+  flex: 1;
+  height: 4px;
+  background-color: #27272a;
+  border-radius: var(--radius-full);
+  transition: background-color var(--duration-normal) var(--ease-default);
+}
+
+.dotActive {
+  background-color: #ffffff;
+}
+
+.dotCompleted {
+  background-color: #71717a;
+}
+
+.stepTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: #ffffff;
+}
+
+.stepContent {
+  padding: var(--space-6);
+  min-height: 300px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid #27272a;
+  background-color: #0c0c0e;
+}
+
+.spacer {
+  flex: 1;
+}

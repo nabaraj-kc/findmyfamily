@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .container { padding-inline: var(--space-6); }
+}
+
+@media (min-width: 1024px) {
+  .container { padding-inline: var(--space-8); }
+}
+
+.size-sm {
+  max-width: 640px;
+}
+
+.size-md {
+  max-width: 960px;
+}
+
+.size-lg {
+  max-width: 1200px;
+}
+
+.size-full {
+  max-width: 100%;
+}

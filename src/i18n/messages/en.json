@@ -1,0 +1,175 @@
+{
+  "common": {
+    "appName": "Find My Family",
+    "tagline": "Nepal Missing Persons & Family Reunification Platform",
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "back": "Go back",
+    "next": "Continue",
+    "search": "Search",
+    "share": "Share",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "lastUpdated": "Last updated {time}",
+    "pendingSync": "Waiting to sync — your data is saved locally",
+    "connectionLost": "You appear to be offline. Don't worry — your data is saved and will sync when you reconnect.",
+    "noResults": "We couldn't find a match for that yet — try a different spelling, or check back soon as new reports come in."
+  },
+  "navigation": {
+    "home": "Home",
+    "reportMissing": "Report Missing",
+    "reportFound": "Report Found",
+    "search": "Search",
+    "gallery": "Gallery",
+    "community": "Community",
+    "developers": "For Developers",
+    "about": "About",
+    "login": "Log in",
+    "language": "भाषा (Language)",
+    "dataSaver": "Data Saver",
+    "accessibility": "Accessibility"
+  },
+  "homepage": {
+    "heroTitle": "Help reunite families separated by disaster",
+    "heroSubtitle": "Report someone missing, share if you've found someone, or search for a loved one.",
+    "reportMissingCta": "Report a missing person",
+    "reportFoundCta": "Report someone found",
+    "searchPlaceholder": "Search by name, nickname, location, or Case ID...",
+    "statsActive": "Active cases",
+    "statsResolved": "Families reunited",
+    "statsTotal": "Total reports"
+  },
+  "caseStatus": {
+    "missing": "Missing",
+    "foundSafe": "Found — Safe",
+    "foundInjured": "Found — Injured",
+    "foundDeceased": "Found — Deceased",
+    "reunited": "Reunited",
+    "resolved": "Resolved"
+  },
+  "trustTier": {
+    "official": "Officially verified",
+    "volunteer": "Volunteer verified",
+    "community": "Community reported"
+  },
+  "emergency": {
+    "title": "Emergency Hotlines",
+    "subtitle": "This platform complements, but does not replace, official emergency services.",
+    "police": "Nepal Police",
+    "redCross": "Nepal Red Cross",
+    "disaster": "Disaster Emergency (Bipad)",
+    "ambulance": "Ambulance",
+    "armedPolice": "Armed Police Force"
+  },
+  "footer": {
+    "about": "About Find My Family",
+    "privacy": "Privacy & Data Policy",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "madeWith": "Built with care for the people of Nepal"
+  },
+  "accessibility": {
+    "largeText": "Large text",
+    "highContrast": "High contrast",
+    "dataSaver": "Data saver mode",
+    "voiceInput": "Voice input"
+  },
+  "reportMissing": {
+    "pageTitle": "Report Missing Person",
+    "pageSubtitle": "Please provide details.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter name",
+    "nickname": "Nickname",
+    "nicknamePlaceholder": "Optional nickname",
+    "age": "Age",
+    "gender": "Gender",
+    "district": "District",
+    "lastSeenLocation": "Last Seen Location",
+    "lastSeenLocationPlaceholder": "City, street, or landmark",
+    "lastSeenDate": "Last Seen Date",
+    "featuresDesc": "Any distinguishing features?",
+    "distinguishingFeatures": "Distinguishing Features",
+    "featuresPlaceholder": "Scars, tattoos, glasses",
+    "clothing": "Clothing",
+    "clothingPlaceholder": "What were they wearing?",
+    "reporterDesc": "Your details.",
+    "reporterName": "Your Name",
+    "reporterNamePlaceholder": "Full Name",
+    "reporterPhone": "Phone Number",
+    "relationship": "Relationship to Missing Person",
+    "privacyConsentText": "I agree to share these details",
+    "basicDetailsDesc": "Basic information.",
+    "locationDesc": "Where were they last seen?"
+  },
+  "reportFound": {
+    "pageTitle": "Report Found Person",
+    "pageSubtitle": "Please provide details.",
+    "statusSafe": "Safe",
+    "statusSafeDesc": "Person is unharmed",
+    "statusInjured": "Injured",
+    "statusInjuredDesc": "Needs medical attention",
+    "statusDeceased": "Deceased",
+    "statusDeceasedDesc": "Unfortunately deceased",
+    "statusStepDesc": "Select current status",
+    "approximateName": "Approximate Name",
+    "approximateNameHelper": "If known",
+    "approximateNamePlaceholder": "Name",
+    "approximateAge": "Approximate Age",
+    "gender": "Gender",
+    "district": "District",
+    "foundLocation": "Found Location",
+    "foundLocationPlaceholder": "Where did you find them?",
+    "foundDate": "Found Date",
+    "featuresDesc": "Any distinguishing features?",
+    "distinguishingFeatures": "Distinguishing Features",
+    "featuresPlaceholder": "Scars, tattoos",
+    "clothing": "Clothing",
+    "clothingPlaceholder": "What are they wearing?",
+    "reporterDesc": "Your details.",
+    "reporterName": "Your Name",
+    "reporterNamePlaceholder": "Full Name",
+    "reporterPhone": "Phone Number",
+    "privacyConsentText": "I agree to share these details",
+    "basicDetailsDesc": "Basic information.",
+    "locationDesc": "Where were they found?"
+  },
+  "emergencyAlerts": {
+    "safeMessage": "Are you safe? Please contact local authorities if you need immediate rescue.",
+    "emergencyNumbers": "Emergency Hotlines: Police (100), Red Cross (113).",
+    "pmReliefFund": "Donate to the Prime Minister Disaster Relief Fund: Himalayan Bank ($) 01904631210086, Standard Chartered 01013243601, Rastriya Banijya Bank 113010000362001."
+  },
+  "about": {
+    "title": "About Find My Family",
+    "content": "Find My Family was built in response to the catastrophic flash floods and landslides that struck Nepal, severely affecting settlements along the Bhotekoshi and Trishuli River systems. The disaster has caused widespread destruction of infrastructure, including houses, roads, and bridges, leaving hundreds missing and displacing thousands of families. Our mission is to facilitate the rapid sharing of information between those looking for loved ones and those who have found individuals needing help. We are a volunteer-driven platform operating in collaboration with local community efforts."
+  },
+  "privacy": {
+    "title": "Privacy & Data Policy",
+    "content": "During crisis response, rapid information sharing is vital, but so is the protection of vulnerable individuals. All data submitted to Find My Family—including names, locations, and photographs—is used strictly for the purpose of family reunification and disaster response coordination. We do not sell or monetize personal data. Verified officials and NGOs may be granted priority access to assist in rescue efforts. You may request the removal of a case at any time once a person is marked as Reunited."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1Title": "1. Report Missing or Found",
+    "step1Desc": "Submit details about a missing person or someone you have found. Include identifiers like clothing, age, and location.",
+    "step2Title": "2. AI Matching Engine",
+    "step2Desc": "Our system cross-references missing reports with found reports to suggest potential matches.",
+    "step3Title": "3. Verification",
+    "step3Desc": "Community volunteers and officials verify the matches to ensure accuracy before contacting families."
+  },
+  "gallery": {
+    "title": "Flood Photo Gallery",
+    "subtitle": "Recent visual updates from affected areas.",
+    "uploadBtn": "Upload Photo",
+    "uploadPlaceholder": "Select image",
+    "captionPlaceholder": "Add a location or description..."
+  },
+  "community": {
+    "title": "Community Updates",
+    "subtitle": "Share local updates, resource availability, and support.",
+    "postPlaceholder": "Share an update...",
+    "postBtn": "Post Update"
+  }
+}

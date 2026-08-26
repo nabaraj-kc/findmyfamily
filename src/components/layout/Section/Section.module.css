@@ -1,0 +1,43 @@
+.section {
+  width: 100%;
+  position: relative;
+}
+
+/* Backgrounds */
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+.bg-accent {
+  background-color: var(--color-accent-900);
+  color: var(--color-surface-50);
+}
+
+/* Paddings */
+.pad-none {
+  padding-block: 0;
+}
+.pad-sm {
+  padding-block: var(--space-8);
+}
+.pad-md {
+  padding-block: var(--space-12);
+}
+.pad-lg {
+  padding-block: var(--space-16);
+}
+.pad-xl {
+  padding-block: var(--space-24);
+}
+
+@media (max-width: 639px) {
+  .pad-sm { padding-block: var(--space-6); }
+  .pad-md { padding-block: var(--space-8); }
+  .pad-lg { padding-block: var(--space-12); }
+  .pad-xl { padding-block: var(--space-16); }
+}
