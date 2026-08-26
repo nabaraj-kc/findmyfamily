@@ -17,7 +17,7 @@ export async function submitReportFound(data: any) {
     const isDeceased = data.status === 'deceased';
     const trustTier = isDeceased ? 'community' : 'volunteer';
 
-    const newCase = insertCase({
+    const newCase = await insertCase({
       type: 'found',
       status: data.status,
       fullName: data.fullName?.trim() || (data.status === 'deceased' ? 'Unknown Deceased Individual' : 'Unknown Found Individual'),

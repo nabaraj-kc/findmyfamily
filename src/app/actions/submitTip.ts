@@ -8,7 +8,7 @@ export async function submitCaseTip(caseId: string, tipText: string, contactInfo
       return { success: false, error: 'Tip description cannot be empty.' };
     }
 
-    insertTip(caseId, tipText.trim(), contactInfo?.trim() || '');
+    await insertTip(caseId, tipText.trim(), contactInfo?.trim() || '');
     console.log(`[DB] Saved information tip for case: ${caseId}`);
     return { success: true };
   } catch (error: any) {

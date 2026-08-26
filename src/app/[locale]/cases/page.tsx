@@ -19,7 +19,7 @@ export default async function CasesDirectoryPage({
   const districtFilter = typeof resolvedSearchParams.district === 'string' ? resolvedSearchParams.district : '';
 
   // Server-side filtering
-  let cases = getPublicCases();
+  let cases = await getPublicCases();
 
   if (statusFilter) {
     cases = cases.filter(c => c.status === statusFilter);

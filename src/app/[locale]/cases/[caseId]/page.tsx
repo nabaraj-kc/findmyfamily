@@ -14,7 +14,7 @@ export default async function CaseDetailPage({
   params: Promise<{ caseId: string; locale: string }>;
 }) {
   const { caseId, locale } = await params;
-  const caseData = getCaseById(caseId);
+  const caseData = await getCaseById(caseId);
 
   if (!caseData) {
     notFound();

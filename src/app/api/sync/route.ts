@@ -17,7 +17,7 @@ export async function POST(request: Request) {
         const type = isFound ? 'found' : 'missing';
         const isDeceased = item.status === 'deceased';
 
-        const created = insertCase({
+        const created = await insertCase({
           type,
           status: item.status || 'missing',
           fullName: item.fullName || 'Unknown',

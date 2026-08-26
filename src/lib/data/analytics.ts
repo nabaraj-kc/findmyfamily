@@ -9,10 +9,10 @@ export interface DashboardMetrics {
   totalMatches: number;
 }
 
-export function getDashboardMetrics(): DashboardMetrics {
-  return dbGetDashboardMetrics();
+export async function getDashboardMetrics(): Promise<DashboardMetrics> {
+  return await dbGetDashboardMetrics();
 }
 
-export function getRecentActivity(limit = 10): MockCase[] {
-  return dbGetRecentActivity(limit) as any;
+export async function getRecentActivity(limit = 10): Promise<MockCase[]> {
+  return (await dbGetRecentActivity(limit)) as any;
 }

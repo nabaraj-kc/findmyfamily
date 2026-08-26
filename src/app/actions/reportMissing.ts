@@ -14,7 +14,7 @@ export async function submitReportMissing(data: any) {
       return { success: false, error: 'Contact phone number is required.' };
     }
 
-    const newCase = insertCase({
+    const newCase = await insertCase({
       type: 'missing',
       status: 'missing',
       fullName: data.fullName.trim(),

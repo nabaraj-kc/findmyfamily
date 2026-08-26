@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const scope = searchParams.get('scope');
 
-    const cases = scope === 'all' ? getAllCases() : getPublicCases();
+    const cases = scope === 'all' ? await getAllCases() : await getPublicCases();
 
     return NextResponse.json({
       success: true,
