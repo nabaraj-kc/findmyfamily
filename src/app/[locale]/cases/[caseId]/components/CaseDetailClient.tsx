@@ -29,16 +29,7 @@ export const CaseDetailClient: React.FC<{ caseId: string, status: string, fullCa
     }
   };
 
-  const handleDeleteCase = async () => {
-    const res = await fetch(`/api/cases/${encodeURIComponent(caseId)}`, {
-      method: 'DELETE'
-    });
-    if (res.ok) {
-      router.push('/cases');
-    } else {
-      throw new Error('Failed to delete case');
-    }
-  };
+
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)', width: '100%' }}>
@@ -64,14 +55,7 @@ export const CaseDetailClient: React.FC<{ caseId: string, status: string, fullCa
           Edit Record
         </Button>
 
-        <Button
-          variant="danger"
-          size="sm"
-          onClick={handleDeleteCase}
-          icon={<Icon name="Trash2" size={14} />}
-        >
-          Delete
-        </Button>
+
       </div>
 
       <InformationModal 
@@ -86,7 +70,6 @@ export const CaseDetailClient: React.FC<{ caseId: string, status: string, fullCa
           onClose={() => setIsEditModalOpen(false)}
           caseData={fullCase || { caseId, status }}
           onSave={handleSaveEditedCase}
-          onDelete={handleDeleteCase}
         />
       )}
     </div>

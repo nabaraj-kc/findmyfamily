@@ -46,19 +46,4 @@ export async function POST(request: Request) {
   }
 }
 
-export async function DELETE(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
 
-    if (id) {
-      const deleted = deleteGalleryImage(id);
-      return NextResponse.json({ success: deleted });
-    }
-
-    return NextResponse.json({ success: false, error: 'Missing image ID' }, { status: 400 });
-  } catch (error: any) {
-    console.error('Error deleting gallery image:', error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
-  }
-}

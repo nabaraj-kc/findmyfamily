@@ -79,38 +79,6 @@ export const CommunityClient: React.FC = () => {
     }
   };
 
-  const handleDeletePost = async (postId: string) => {
-    if (!window.confirm('Permanently delete this community post from the database?')) return;
-    try {
-      const res = await fetch(`/api/community?postId=${encodeURIComponent(postId)}`, {
-        method: 'DELETE'
-      });
-      if (res.ok) {
-        setPosts(prev => prev.filter(p => p.id !== postId));
-      }
-    } catch (err) {
-      console.error('Failed to delete post:', err);
-    }
-  };
-
-  const handleDeleteComment = async (postId: string, commentId: string) => {
-    if (!window.confirm('Permanently delete this reply?')) return;
-    try {
-      const res = await fetch(`/api/community?commentId=${encodeURIComponent(commentId)}`, {
-        method: 'DELETE'
-      });
-      if (res.ok) {
-        setPosts(prev => prev.map(p => {
-          if (p.id === postId) {
-            return { ...p, comments: p.comments.filter(c => c.id !== commentId) };
-          }
-          return p;
-        }));
-      }
-    } catch (err) {
-      console.error('Failed to delete comment:', err);
-    }
-  };
 
   const handleReplySubmit = async (postId: string) => {
     const text = replyText[postId];
@@ -208,29 +176,6 @@ export const CommunityClient: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Delete Post Button */}
-                  <button
-                    onClick={() => handleDeletePost(post.id)}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      color: '#71717a',
-                      cursor: 'pointer',
-                      padding: '4px 6px',
-                      borderRadius: '4px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '4px',
-                      fontSize: '11px',
-                      marginLeft: 'auto'
-                    }}
-                    title="Delete post permanently"
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#ef4444')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#71717a')}
-                  >
-                    <Icon name="Trash2" size={14} />
-                    <span>Delete</span>
-                  </button>
                 </div>
                 
                 <p className={styles.postContent}>{post.content}</p>
@@ -254,22 +199,7 @@ export const CommunityClient: React.FC = () => {
                         <span className={styles.commentAuthor}>{comment.author}:</span>
                         <span className={styles.commentText}>{comment.text}</span>
                       </div>
-                      <button
-                        onClick={() => handleDeleteComment(post.id, comment.id)}
-                        style={{
-                          background: 'none',
-                          border: 'none',
-                          color: '#71717a',
-                          cursor: 'pointer',
-                          padding: '2px',
-                          marginLeft: '8px'
-                        }}
-                        title="Delete comment permanently"
-                        onMouseEnter={(e) => (e.currentTarget.style.color = '#ef4444')}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = '#71717a')}
-                      >
-                        <Icon name="Trash2" size={12} />
-                      </button>
+
                     </div>
                   ))}
                   

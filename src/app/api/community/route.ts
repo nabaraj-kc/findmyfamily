@@ -53,25 +53,3 @@ export async function POST(request: Request) {
   }
 }
 
-export async function DELETE(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const postId = searchParams.get('postId');
-    const commentId = searchParams.get('commentId');
-
-    if (postId) {
-      const deleted = deleteCommunityPost(postId);
-      return NextResponse.json({ success: deleted });
-    }
-
-    if (commentId) {
-      const deleted = deleteCommunityComment(commentId);
-      return NextResponse.json({ success: deleted });
-    }
-
-    return NextResponse.json({ success: false, error: 'Missing postId or commentId' }, { status: 400 });
-  } catch (error: any) {
-    console.error('Error deleting community item:', error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
-  }
-}

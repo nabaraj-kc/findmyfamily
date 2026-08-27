@@ -37,15 +37,4 @@ export async function PUT(
   }
 }
 
-export async function DELETE(
-  request: Request,
-  { params }: { params: Promise<{ caseId: string }> }
-) {
-  try {
-    const { caseId } = await params;
-    const deleted = await deleteCase(caseId);
-    return NextResponse.json({ success: deleted });
-  } catch (error: any) {
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
-  }
-}
+

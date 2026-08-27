@@ -79,20 +79,6 @@ export const GalleryClient: React.FC = () => {
     }
   };
 
-  // Permanent Single Delete
-  const handleDeleteSingleImage = async (id: string) => {
-    if (!window.confirm('Permanently delete this photo from the disaster archive?')) return;
-    try {
-      const res = await fetch(`/api/gallery?id=${encodeURIComponent(id)}`, {
-        method: 'DELETE'
-      });
-      if (res.ok) {
-        setImages(prev => prev.filter(img => img.id !== id));
-      }
-    } catch (err) {
-      console.error('Delete failed:', err);
-    }
-  };
 
   return (
     <Section padding="lg">
@@ -156,31 +142,6 @@ export const GalleryClient: React.FC = () => {
                 className={styles.card}
                 style={{ position: 'relative' }}
               >
-                {/* Delete Button Top Right */}
-                <button
-                  onClick={() => handleDeleteSingleImage(img.id)}
-                  style={{
-                    position: 'absolute',
-                    top: '10px',
-                    right: '10px',
-                    zIndex: 5,
-                    width: '30px',
-                    height: '30px',
-                    borderRadius: '50%',
-                    backgroundColor: 'rgba(20, 20, 23, 0.85)',
-                    border: '1px solid #7f1d1d',
-                    color: '#f87171',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.5)'
-                  }}
-                  title="Delete photo permanently"
-                  aria-label="Delete photo permanently"
-                >
-                  <Icon name="Trash2" size={14} />
-                </button>
 
                 <div className={styles.imageWrapper}>
                   <img src={img.url} alt={img.caption || 'Disaster photo'} className={styles.image} loading="lazy" />
