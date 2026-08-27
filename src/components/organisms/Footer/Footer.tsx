@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
                 <li><Link href="/about" className={styles.link}>{t('footer.about')}</Link></li>
                 <li><Link href="/how-it-works" className={styles.link}>{t('footer.howItWorks')}</Link></li>
                 <li><Link href="/privacy" className={styles.link}>{t('footer.privacy')}</Link></li>
-                <li><a href="mailto:contact@findmyfamily.gov.np" className={styles.link}>{t('footer.contact')}</a></li>
+                <li><a href="mailto:nabarajkc43@gmail.com" className={styles.link}>{t('footer.contact')}</a></li>
               </ul>
             </div>
           </div>
