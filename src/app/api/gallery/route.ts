@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     }
 
     if (image && image.url) {
-      const created = insertGalleryImage(image);
+      const created = await insertGalleryImage(image);
       return NextResponse.json({ success: true, image: created });
     }
 

@@ -37,12 +37,20 @@ export async function POST(request: Request) {
     }
 
     if (action === 'create_comment' && comment) {
-      const created = insertCommunityComment(comment.postId, comment.author, comment.text);
+      const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || '0.0.0.0';
+      const ipHash = ip.split(',')[0].replace(/[^0-9]/g, '').slice(-4);
+      const generatedAuthor = `User-${ipHash || Math.floor(Math.random() * 9000 + 1000)}`;
+      
+      const created = await insertCommunityComment(comment.postId, generatedAuthor, comment.text);
       return NextResponse.json({ success: true, comment: created });
     }
 
     if (post && post.content) {
-      const created = insertCommunityPost(post);
+      const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || '0.0.0.0';
+      const ipHash = ip.split(',')[0].replace(/[^0-9]/g, '').slice(-4);
+      post.author = `User-${ipHash || Math.floor(Math.random() * 9000 + 1000)}`;
+      
+      const created = await insertCommunityPost(post);
       return NextResponse.json({ success: true, post: created });
     }
 
