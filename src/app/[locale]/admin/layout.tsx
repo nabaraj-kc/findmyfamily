@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from '@/i18n/routing';
 import { Icon } from '@/components/atoms/Icon/Icon';
 import { Container } from '@/components/layout';
+import { LogoutButton } from './components/LogoutButton';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,6 +27,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <Icon name="GitMerge" size={18} />
                 Match Queue
               </Link>
+              <div style={{ width: '1px', backgroundColor: 'var(--color-slate-700)', margin: '0 var(--space-2)' }} />
+              <LogoutButton />
             </nav>
           </div>
         </Container>

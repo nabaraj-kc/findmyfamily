@@ -12,28 +12,26 @@ export default function middleware(request: NextRequest) {
                   pathname.includes('/admin') || 
                   pathname.startsWith('/api/admin');
 
-  if (isAdmin) {
-    const basicAuth = request.headers.get('authorization');
-    const adminPassword = process.env.ADMIN_PASSWORD || 'findmyfamily2026';
+  if (isAdmin && !pathname.endsWith('/admin/login')) {
+    const adminSession = request.cookies.get('admin_session');
     
-    if (basicAuth) {
-      const authValue = basicAuth.split(' ')[1];
-      const [user, pwd] = atob(authValue).split(':');
-      
-      if (user === 'admin' && pwd === adminPassword) {
-        if (pathname.startsWith('/api/')) {
-          return NextResponse.next();
-        }
-        return intlMiddleware(request);
+    if (!adminSession || adminSession.value !== 'authenticated') {
+      // Not authenticated
+      if (pathname.startsWith('/api/')) {
+        return new NextResponse(JSON.stringify({ success: false, message: 'Unauthorized' }), {
+          status: 401,
+          headers: { 'Content-Type': 'application/json' },
+        });
       }
+      
+      // Redirect to login page for browser navigation
+      // Extract locale from the pathname, default to 'en'
+      const match = pathname.match(/^\/(en|ne)\//);
+      const locale = match ? match[1] : 'en';
+      
+      const loginUrl = new URL(`/${locale}/admin/login`, request.url);
+      return NextResponse.redirect(loginUrl);
     }
-    
-    return new NextResponse('Authentication required', {
-      status: 401,
-      headers: {
-        'WWW-Authenticate': 'Basic realm="Secure Area"',
-      },
-    });
   }
 
   if (pathname.startsWith('/api/')) {
