@@ -28,10 +28,9 @@ export default function AdminLoginPage() {
       const data = await res.json();
 
       if (res.ok && data.success) {
-        // Redirect to admin dashboard
+        // Redirect to admin dashboard using hard navigation to clear router cache
         const currentLocale = window.location.pathname.split('/')[1];
-        router.push(`/${currentLocale}/admin`);
-        router.refresh();
+        window.location.href = `/${currentLocale}/admin`;
       } else {
         setError(data.message || 'Invalid password');
       }

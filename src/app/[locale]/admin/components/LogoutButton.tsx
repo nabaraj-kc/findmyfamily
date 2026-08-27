@@ -10,10 +10,9 @@ export function LogoutButton() {
   const handleLogout = async () => {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
-      // Redirect to home or login page
+      // Redirect to home or login page using hard navigation
       const currentLocale = window.location.pathname.split('/')[1];
-      router.push(`/${currentLocale}/login`);
-      router.refresh();
+      window.location.href = `/${currentLocale}/login`;
     } catch (e) {
       console.error(e);
     }
