@@ -83,7 +83,7 @@ export const AudioPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
     const onLoadedMetadata = () => {
       audio.currentTime = track.startOffset;
-      if (isPlaying || !userInteractedRef.current) {
+      if (isPlaying) {
         audio.play().then(() => {
           setIsPlaying(true);
         }).catch(() => {});
@@ -120,35 +120,6 @@ export const AudioPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
     // Initial load: charisong (index 0) starting at 25 seconds
     loadAndPlayTrack(0);
-
-    // Autoplay trigger immediately
-    const attemptAutoplay = () => {
-      if (userInteractedRef.current) return;
-      audio.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        const onFirstInteraction = () => {
-          if (!userInteractedRef.current) {
-            audio.play().then(() => setIsPlaying(true)).catch(() => {});
-          }
-          cleanupInteractionListeners();
-        };
-
-        const cleanupInteractionListeners = () => {
-          window.removeEventListener('pointerdown', onFirstInteraction);
-          window.removeEventListener('touchstart', onFirstInteraction);
-          window.removeEventListener('scroll', onFirstInteraction);
-          window.removeEventListener('click', onFirstInteraction);
-        };
-
-        window.addEventListener('pointerdown', onFirstInteraction, { once: true });
-        window.addEventListener('touchstart', onFirstInteraction, { once: true });
-        window.addEventListener('scroll', onFirstInteraction, { once: true });
-        window.addEventListener('click', onFirstInteraction, { once: true });
-      });
-    };
-
-    attemptAutoplay();
 
     return () => {
       if (trackTimeoutRef.current) {
