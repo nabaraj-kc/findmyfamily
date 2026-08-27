@@ -8,7 +8,7 @@ import { Icon } from '@/components/atoms/Icon/Icon';
 import { exportToCsv, exportToJson, printOrSavePdf } from '@/lib/utils/exportData';
 import { ALL_DISTRICTS } from '@/constants';
 import { EditCaseModal } from '@/components/molecules/EditCaseModal/EditCaseModal';
-import { NepalSolidarityPlayer } from '@/components/molecules/NepalSolidarityPlayer/NepalSolidarityPlayer';
+
 
 interface AdminDashboardClientProps {
   initialMetrics?: any;
@@ -531,7 +531,7 @@ export const AdminDashboardClient: React.FC<AdminDashboardClientProps> = ({
             Refresh
           </Button>
 
-          <NepalSolidarityPlayer variant="compact" />
+
 
           <Button
             variant="primary"

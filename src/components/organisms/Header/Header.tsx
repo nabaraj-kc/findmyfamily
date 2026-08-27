@@ -9,7 +9,7 @@ import { usePreferences } from '@/context/PreferencesContext';
 import { Icon } from '../../atoms/Icon/Icon';
 import { InstallAppButton } from '../../molecules/InstallAppButton/InstallAppButton';
 import { DonationModal } from '../../molecules/DonationModal/DonationModal';
-import { NepalSolidarityPlayer } from '../../molecules/NepalSolidarityPlayer/NepalSolidarityPlayer';
+
 
 export const Header: React.FC = () => {
   const t = useTranslations('navigation');
@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
           <div className={styles.actions}>
             {/* Desktop Only: Song Player */}
             <div className={styles.desktopOnlyAction}>
-              <NepalSolidarityPlayer variant="compact" />
+
             </div>
 
             {/* Desktop Only: Download App */}
@@ -120,7 +120,7 @@ export const Header: React.FC = () => {
               
               <div className={styles.mobileActions}>
                 {/* Mobile Nepali Song Player */}
-                <NepalSolidarityPlayer variant="inline" />
+
 
                 {/* Mobile Relief Fund Button */}
                 <button
@@ -180,7 +180,7 @@ export const Header: React.FC = () => {
       </header>
 
       {/* Floating Global Audio Player Indicator for Mobile & Desktop */}
-      <NepalSolidarityPlayer variant="floating" />
+
 
       {/* Donation Relief QR Modal */}
       <DonationModal 

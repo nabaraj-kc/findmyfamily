@@ -3,7 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { PreferencesProvider } from '@/context/PreferencesContext';
-import { AudioPlayerProvider } from '@/context/AudioPlayerContext';
+
 import { Header, Footer, RotatingAlert } from '@/components/organisms';
 import { OfflineSyncManager } from '@/components/molecules/OfflineSyncManager/OfflineSyncManager';
 import { InstallPrompt } from '@/components/molecules/InstallPrompt/InstallPrompt';
@@ -38,18 +38,16 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <PreferencesProvider>
-        <AudioPlayerProvider>
-          <OfflineSyncManager />
-          <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <InstallPrompt />
-            <RotatingAlert />
-            <Header />
-            <main style={{ flex: 1 }}>
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </AudioPlayerProvider>
+        <OfflineSyncManager />
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <InstallPrompt />
+          <RotatingAlert />
+          <Header />
+          <main style={{ flex: 1 }}>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </PreferencesProvider>
     </NextIntlClientProvider>
   );
