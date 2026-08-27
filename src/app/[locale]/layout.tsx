@@ -6,6 +6,7 @@ import { PreferencesProvider } from '@/context/PreferencesContext';
 import { AudioPlayerProvider } from '@/context/AudioPlayerContext';
 import { Header, Footer, RotatingAlert } from '@/components/organisms';
 import { OfflineSyncManager } from '@/components/molecules/OfflineSyncManager/OfflineSyncManager';
+import { InstallPrompt } from '@/components/molecules/InstallPrompt/InstallPrompt';
 import type { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default async function LocaleLayout({
         <AudioPlayerProvider>
           <OfflineSyncManager />
           <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <InstallPrompt />
             <RotatingAlert />
             <Header />
             <main style={{ flex: 1 }}>
