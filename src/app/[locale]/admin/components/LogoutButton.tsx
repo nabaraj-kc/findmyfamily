@@ -12,7 +12,7 @@ export function LogoutButton() {
       await fetch('/api/auth/logout', { method: 'POST' });
       // Redirect to home or login page
       const currentLocale = window.location.pathname.split('/')[1];
-      router.push(`/${currentLocale}/admin/login`);
+      router.push(`/${currentLocale}/login`);
       router.refresh();
     } catch (e) {
       console.error(e);

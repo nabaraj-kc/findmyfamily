@@ -12,7 +12,7 @@ export default function middleware(request: NextRequest) {
                   pathname.includes('/admin') || 
                   pathname.startsWith('/api/admin');
 
-  if (isAdmin && !pathname.endsWith('/admin/login')) {
+  if (isAdmin) {
     const adminSession = request.cookies.get('admin_session');
     
     if (!adminSession || adminSession.value !== 'authenticated') {
@@ -29,7 +29,7 @@ export default function middleware(request: NextRequest) {
       const match = pathname.match(/^\/(en|ne)\//);
       const locale = match ? match[1] : 'en';
       
-      const loginUrl = new URL(`/${locale}/admin/login`, request.url);
+      const loginUrl = new URL(`/${locale}/login`, request.url);
       return NextResponse.redirect(loginUrl);
     }
   }
