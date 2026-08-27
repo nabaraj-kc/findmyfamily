@@ -2,7 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Container, Section } from '@/components/layout';
-import { getCaseById, getDistrictName } from '@/lib/db/database';
+import { getCaseById, getDistrictName, redactCaseData } from '@/lib/db/database';
 import { Badge } from '@/components/atoms/Badge/Badge';
 import { Icon } from '@/components/atoms/Icon/Icon';
 import { CaseIdBadge } from '@/components/molecules/CaseIdBadge/CaseIdBadge';
@@ -14,11 +14,12 @@ export default async function CaseDetailPage({
   params: Promise<{ caseId: string; locale: string }>;
 }) {
   const { caseId, locale } = await params;
-  const caseData = await getCaseById(caseId);
+  const rawData = await getCaseById(caseId);
 
-  if (!caseData) {
+  if (!rawData) {
     notFound();
   }
+  const caseData = redactCaseData(rawData);
 
   // Derived properties
   let statusBadgeStatus: 'missing' | 'found-safe' | 'found-injured' | 'found-deceased' = 'missing';

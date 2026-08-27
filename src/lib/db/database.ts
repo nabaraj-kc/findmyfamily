@@ -398,10 +398,20 @@ export async function getAllCases(): Promise<DbCase[]> {
   return rs.rows as unknown as DbCase[];
 }
 
+export function redactCaseData(c: DbCase): DbCase {
+  return {
+    ...c,
+    reporterName: c.reporterName ? c.reporterName.charAt(0) + '*** (Hidden for Privacy)' : '',
+    reporterPhone: '***-****-***',
+    lastKnownLocation: 'Location hidden for privacy. Viewable by admins.',
+  };
+}
+
 export async function getPublicCases(): Promise<DbCase[]> {
   await initDb();
   const rs = await db.execute('SELECT * FROM cases WHERE isPublished = 1 ORDER BY id DESC');
-  return rs.rows as unknown as DbCase[];
+  const cases = rs.rows as unknown as DbCase[];
+  return cases.map(redactCaseData);
 }
 
 export async function getCaseById(caseId: string): Promise<DbCase | undefined> {

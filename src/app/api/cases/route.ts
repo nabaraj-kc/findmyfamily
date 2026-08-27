@@ -3,10 +3,7 @@ import { getAllCases, getPublicCases } from '@/lib/db/database';
 
 export async function GET(request: Request) {
   try {
-    const { searchParams } = new URL(request.url);
-    const scope = searchParams.get('scope');
-
-    const cases = scope === 'all' ? await getAllCases() : await getPublicCases();
+    const cases = await getPublicCases();
 
     return NextResponse.json({
       success: true,
